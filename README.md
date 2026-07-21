@@ -1,88 +1,94 @@
 <div align="center">
 
-# 👋 Hello, I'm Riyan Syahrul
+# ⚡ Riyan Syahrul
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00F7FF&center=true&vCenter=true&random=false&width=700&lines=Network+Engineer;TKJ+Teacher;Linux+%7C+Docker+%7C+MikroTik;Fiber+Optic+Specialist;Always+Learning+New+Technology" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=28&pause=1200&color=00F7FF&center=true&vCenter=true&width=900&lines=Network+Engineer;Linux+Administrator;Fiber+Optic+Specialist;Docker+%7C+MikroTik+%7C+Cisco;TKJ+Teacher;AI+Server+Developer" />
 
 </div>
 
----
+```console
+┌──(rynnn㉿github)-[~]
+└─$ neofetch
 
-```bash
-┌──(rynnn㉿github)-[~/profile]
-└─$ whoami
+██████╗ ██╗   ██╗ █████╗ ███╗   ██╗
+██╔══██╗╚██╗ ██╔╝██╔══██╗████╗  ██║
+██████╔╝ ╚████╔╝ ███████║██╔██╗ ██║
+██╔══██╗  ╚██╔╝  ██╔══██║██║╚██╗██║
+██║  ██║   ██║   ██║  ██║██║ ╚████║
+╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝
 
-Name        : Riyan Syahrul
-Role        : Network Engineer & TKJ Teacher
-Location    : Indonesia
-Focus       : Networking, Server, Fiber Optic, Linux
-Learning    : AI Server, Docker, DevOps
-Status      : Always Learning 🚀
+Name      : Riyan Syahrul
+Role      : Network Engineer & TKJ Teacher
+Location  : Indonesia
+Terminal  : PowerShell / Bash
+Editor    : VS Code
+Kernel    : Linux • Windows
+Learning  : DevOps • AI • Cloud
 ```
 
 ---
 
-# 💻 About Me
+## ⚙ Current Stack
 
-I'm passionate about building reliable network infrastructure, Linux servers,
-Fiber Optic systems, virtualization, and AI-powered self-hosted services.
-
-I enjoy creating learning projects for students and exploring modern
-technologies that solve real-world problems.
+<img src="https://skillicons.dev/icons?i=linux,docker,ubuntu,debian,git,github,vscode,python,php,html,css,js,bash&perline=7"/>
 
 ---
 
-# 🚀 Tech Stack
+## 🌐 Networking
 
-### Networking
+🔹 MikroTik
 
-![MikroTik](https://img.shields.io/badge/MikroTik-293239?style=for-the-badge&logo=mikrotik&logoColor=white)
-![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
-![TCP/IP](https://img.shields.io/badge/TCP/IP-00599C?style=for-the-badge)
+🔹 Cisco
 
-### Server
+🔹 Fiber Optic (FTTH / FTTB)
 
-![Linux](https://img.shields.io/badge/Linux-black?style=for-the-badge&logo=linux)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu)
-![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
-![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge)
+🔹 Routing
 
-### Programming
+🔹 Switching
 
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+🔹 VLAN
+
+🔹 VPN
+
+🔹 Firewall
 
 ---
 
-# ⚡ Current Focus
+## 🚀 Current Projects
 
-- 🌐 Enterprise Networking
-- ☁ Linux Server Administration
-- 🐳 Docker & Containerization
-- 🔥 Fiber Optic Technology
-- 🤖 Self Hosted AI Server
-- 📡 MikroTik Automation
-- 💻 DevOps Learning
+✔ AI Server (Ollama + Open WebUI)
+
+✔ Linux Server
+
+✔ Docker Deployment
+
+✔ Teaching Factory
+
+✔ Fiber Optic Lab
+
+✔ Mikrotik Automation
 
 ---
 
-# 📊 GitHub Stats
+## 📈 GitHub Analytics
 
 <p align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=rynnn27&show_icons=true&theme=tokyonight&hide_border=true"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=rynnn27&show_icons=true&theme=tokyonight&hide_border=true"/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rynnn27&layout=compact&theme=tokyonight&hide_border=true"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rynnn27&layout=compact&theme=tokyonight&hide_border=true"/>
+
+</p>
+
+<p align="center">
+
+<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=rynnn27&theme=tokyo-night&hide_border=true"/>
 
 </p>
 
 ---
 
-# 🔥 GitHub Streak
+## 🔥 GitHub Streak
 
 <p align="center">
 
@@ -92,52 +98,30 @@ technologies that solve real-world problems.
 
 ---
 
-# 📈 Activity Graph
+## 🏆 Achievements
 
 <p align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=rynnn27&theme=tokyo-night&hide_border=true"/>
+<img src="https://github-profile-trophy.vercel.app/?username=rynnn27&theme=tokyonight&no-frame=true&row=2&column=4"/>
 
 </p>
 
 ---
 
-# 🏆 GitHub Trophy
+## 🐍 Contribution Snake
 
-<p align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=rynnn27&theme=tokyonight&no-frame=true&row=1&column=7"/>
-
-</p>
+<img src="https://raw.githubusercontent.com/rynnn27/rynnn27/output/github-contribution-grid-snake.svg">
 
 ---
 
-# 🐍 Contribution Snake
+## 💬 Favorite Quote
 
-<p align="center">
-
-<img src="https://raw.githubusercontent.com/rynnn27/rynnn27/output/github-contribution-grid-snake.svg"/>
-
-</p>
-
----
-
-# 📫 Connect With Me
-
-<p align="center">
-
-<a href="https://github.com/rynnn27">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
-</a>
-
-</p>
+> *"Keep Learning, Keep Building, Keep Sharing."*
 
 ---
 
 <div align="center">
 
-### 💡 "Keep Learning, Keep Building, Keep Sharing."
-
-<img src="https://komarev.com/ghpvc/?username=rynnn27&style=for-the-badge&color=blue"/>
+<img src="https://komarev.com/ghpvc/?username=rynnn27&style=for-the-badge&color=00c2ff"/>
 
 </div>
