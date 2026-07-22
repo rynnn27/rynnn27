@@ -1,0 +1,468 @@
+
+
+Index · HTML
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riyan Syahrul — Network Engineer</title>
+<meta name="description" content="Portofolio Riyan Syahrul — Network Engineer, Linux Administrator, Fiber Optic Specialist, TKJ Teacher.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e14;
+    --bg-panel:#10151d;
+    --bg-panel-alt:#141b25;
+    --border:#1e2733;
+    --cyan:#00f7ff;
+    --cyan-dim:#0891a8;
+    --amber:#ffb454;
+    --green:#5eff8f;
+    --text:#c9d6e3;
+    --text-dim:#6b7f92;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --sans:'IBM Plex Sans', system-ui, sans-serif;
+    --radius:6px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    overflow-x:hidden;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(0,247,255,0.06), transparent 40%),
+      radial-gradient(circle at 85% 20%, rgba(255,180,84,0.05), transparent 35%);
+  }
+  ::selection{background:var(--cyan);color:#000;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .scanline{
+    pointer-events:none;position:fixed;inset:0;z-index:9999;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode:overlay;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+ 
+  /* NAV */
+  nav.topnav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(10,14,20,0.85);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  .topnav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .prompt-logo{font-family:var(--mono);font-weight:700;font-size:15px;color:var(--cyan);}
+  .prompt-logo .dim{color:var(--text-dim);}
+  .navlinks{display:flex;gap:28px;font-family:var(--mono);font-size:13px;}
+  .navlinks a{color:var(--text-dim);transition:color .15s;position:relative;}
+  .navlinks a:hover, .navlinks a:focus-visible{color:var(--cyan);outline:none;}
+  .navlinks a::before{content:'./';color:var(--cyan-dim);}
+  .navtoggle{display:none;background:none;border:1px solid var(--border);color:var(--cyan);width:38px;height:38px;border-radius:var(--radius);font-family:var(--mono);cursor:pointer;}
+ 
+  /* HERO */
+  header.hero{
+    min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    padding:100px 24px 60px;position:relative;
+  }
+  .term-window{
+    max-width:760px;margin:0 auto;width:100%;
+    background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,247,255,0.03);
+    overflow:hidden;
+  }
+  .term-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg-panel-alt);border-bottom:1px solid var(--border);}
+  .dot{width:11px;height:11px;border-radius:50%;}
+  .dot.red{background:#ff5f57;}.dot.yellow{background:#febc2e;}.dot.green{background:#28c840;}
+  .term-title{margin-left:8px;font-family:var(--mono);font-size:12px;color:var(--text-dim);}
+  .term-body{padding:26px 28px 30px;font-family:var(--mono);}
+  .boot-line{font-size:13px;color:var(--text-dim);margin-bottom:6px;opacity:0;animation:fadeIn .4s forwards;}
+  .boot-line span{color:var(--green);}
+  .boot-line:nth-child(1){animation-delay:.1s;}
+  .boot-line:nth-child(2){animation-delay:.5s;}
+  .boot-line:nth-child(3){animation-delay:.9s;}
+  @keyframes fadeIn{to{opacity:1;}}
+  .hero-name{
+    font-size:clamp(34px,6vw,52px);font-weight:800;letter-spacing:-0.02em;
+    margin:22px 0 6px;color:#fff;
+    text-shadow:0 0 24px rgba(0,247,255,0.25);
+  }
+  .hero-role{font-size:clamp(15px,2.4vw,19px);color:var(--cyan);min-height:1.4em;}
+  .hero-role .cursor{display:inline-block;width:9px;background:var(--cyan);margin-left:2px;animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  .hero-meta{margin-top:18px;font-size:13px;color:var(--text-dim);display:flex;gap:18px;flex-wrap:wrap;}
+  .hero-meta b{color:var(--text);font-weight:500;}
+  .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono);font-size:13px;padding:11px 20px;border-radius:var(--radius);
+    border:1px solid var(--cyan-dim);transition:all .15s;cursor:pointer;
+  }
+  .btn-primary{background:var(--cyan);color:#031014;font-weight:700;border-color:var(--cyan);}
+  .btn-primary:hover{box-shadow:0 0 22px rgba(0,247,255,0.4);transform:translateY(-1px);}
+  .btn-ghost{color:var(--text);border-color:var(--border);}
+  .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);}
+  .btn:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;}
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--text-dim);text-align:center;}
+  .scroll-hint .arrow{margin-top:6px;animation:bounce 1.8s infinite;}
+  @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+ 
+  /* SECTIONS */
+  .section{padding:90px 24px;border-top:1px solid var(--border);}
+  .section.alt{background:var(--bg-panel);}
+  .sec-head{max-width:1100px;margin:0 auto 40px;}
+  .sec-prompt{font-family:var(--mono);font-size:13px;color:var(--cyan-dim);margin-bottom:8px;}
+  .sec-prompt b{color:var(--cyan);}
+  .sec-title{font-size:clamp(22px,3.4vw,30px);font-weight:700;color:#fff;letter-spacing:-0.01em;}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease, transform .5s ease;}
+  .reveal.in{opacity:1;transform:none;}
+ 
+  /* ABOUT / NEOFETCH */
+  .neofetch{
+    max-width:1100px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:40px;
+    background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;padding:32px;
+    align-items:center;
+  }
+  .ascii{font-family:var(--mono);color:var(--cyan);font-size:11px;line-height:1.25;white-space:pre;overflow-x:auto;}
+  .neofetch-info{font-family:var(--mono);font-size:13.5px;}
+  .neofetch-info div{padding:5px 0;border-bottom:1px dashed var(--border);display:flex;gap:10px;}
+  .neofetch-info div:last-child{border-bottom:none;}
+  .neofetch-info .k{color:var(--amber);width:96px;flex-shrink:0;}
+  .neofetch-info .v{color:var(--text);}
+ 
+  /* STACK */
+  .stack-grid{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;}
+  .stack-chip{
+    display:flex;align-items:center;gap:10px;background:var(--bg-panel);border:1px solid var(--border);
+    border-radius:var(--radius);padding:10px 16px;font-family:var(--mono);font-size:13px;transition:.15s;
+  }
+  .stack-chip:hover{border-color:var(--cyan-dim);transform:translateY(-2px);}
+  .stack-chip img{width:22px;height:22px;}
+ 
+  /* NETWORK */
+  .topo{max-width:1100px;margin:0 auto 34px;overflow-x:auto;}
+  .topo-row{display:flex;align-items:center;min-width:600px;padding:20px 0;}
+  .topo-node{display:flex;flex-direction:column;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--text-dim);}
+  .topo-node .box{
+    width:56px;height:56px;border:1px solid var(--cyan-dim);border-radius:var(--radius);
+    display:flex;align-items:center;justify-content:center;font-size:24px;background:var(--bg-panel);
+    box-shadow:0 0 16px rgba(0,247,255,0.08);
+  }
+  .topo-line{flex:1;height:1px;background:repeating-linear-gradient(90deg, var(--cyan-dim) 0 6px, transparent 6px 12px);margin:0 6px;position:relative;top:-14px;}
+  .badges{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;}
+  .badge{font-family:var(--mono);font-size:12.5px;color:var(--amber);border:1px solid rgba(255,180,84,0.35);background:rgba(255,180,84,0.06);padding:7px 14px;border-radius:20px;}
+ 
+  /* PROJECTS */
+  .proj-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .proj-card{
+    background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:22px;
+    transition:.2s;position:relative;overflow:hidden;
+  }
+  .proj-card:hover{border-color:var(--cyan-dim);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,0.4);}
+  .proj-icon{font-size:26px;margin-bottom:12px;}
+  .proj-title{font-family:var(--mono);font-weight:700;font-size:15px;color:#fff;margin-bottom:8px;}
+  .proj-desc{font-size:13.5px;color:var(--text-dim);margin-bottom:14px;}
+  .proj-tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .proj-tag{font-family:var(--mono);font-size:10.5px;color:var(--cyan);border:1px solid var(--cyan-dim);border-radius:4px;padding:2px 8px;}
+ 
+  /* STATS */
+  .stats-wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+  .stats-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .stat-card{background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;padding:14px;overflow:hidden;}
+  .stat-card img{width:100%;border-radius:6px;}
+  @media(max-width:640px){.stats-pair{grid-template-columns:1fr;}}
+ 
+  /* CONTACT */
+  .contact-box{max-width:700px;margin:0 auto;text-align:center;}
+  blockquote{font-family:var(--mono);font-style:italic;color:var(--text);font-size:16px;border-left:2px solid var(--cyan);padding-left:16px;margin:0 auto 30px;text-align:left;max-width:520px;}
+  .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
+  footer{padding:36px 24px;text-align:center;border-top:1px solid var(--border);font-family:var(--mono);font-size:12px;color:var(--text-dim);}
+  footer .uptime{color:var(--green);margin-bottom:10px;}
+  footer img{margin:14px auto 0;}
+ 
+  @media(max-width:760px){
+    .navlinks{position:fixed;top:57px;left:0;right:0;background:var(--bg-panel);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--border);transform:translateY(-130%);transition:transform .2s;}
+    .navlinks.open{transform:translateY(0);}
+    .navtoggle{display:block;}
+    .neofetch{grid-template-columns:1fr;}
+    .ascii{font-size:9px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+ 
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="prompt-logo">riyan<span class="dim">@</span>network<span class="dim">:~$</span></div>
+    <button class="navtoggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <div class="navlinks" id="navLinks">
+      <a href="#about">about</a>
+      <a href="#stack">stack</a>
+      <a href="#network">network</a>
+      <a href="#projects">projects</a>
+      <a href="#stats">stats</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+ 
+<header class="hero" id="top">
+  <div class="term-window">
+    <div class="term-bar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="term-title">riyan@github — bash — 80x24</span>
+    </div>
+    <div class="term-body">
+      <div class="boot-line">$ ./boot profile.sh <span>[OK]</span></div>
+      <div class="boot-line">$ loading modules: linux, docker, mikrotik, cisco, fiber-optic... <span>[OK]</span></div>
+      <div class="boot-line">$ connection established. welcome. <span>[OK]</span></div>
+ 
+      <div class="hero-name">⚡ Riyan Syahrul</div>
+      <div class="hero-role" id="typedRole"></div>
+ 
+      <div class="hero-meta">
+        <span>📍 <b>Indonesia</b></span>
+        <span>💻 <b>Linux · Windows</b></span>
+        <span>🎓 <b>TKJ Teacher</b></span>
+      </div>
+ 
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+        <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
+        <a href="https://github.com/rynnn27" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">scroll<div class="arrow">↓</div></div>
+</header>
+ 
+<section class="section" id="about">
+  <div class="sec-head reveal">
+    <div class="sec-prompt"><b>$</b> cat about.txt</div>
+    <div class="sec-title">Tentang Saya</div>
+  </div>
+  <div class="neofetch reveal">
+    <pre class="ascii">██████╗ ██╗   ██╗ █████╗ ███╗   ██╗
+██╔══██╗╚██╗ ██╔╝██╔══██╗████╗  ██║
+██████╔╝ ╚████╔╝ ███████║██╔██╗ ██║
+██╔══██╗  ╚██╔╝  ██╔══██║██║╚██╗██║
+██║  ██║   ██║   ██║  ██║██║ ╚████║
+╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝</pre>
+    <div class="neofetch-info">
+      <div><span class="k">Name</span><span class="v">Riyan Syahrul</span></div>
+      <div><span class="k">Role</span><span class="v">Network Engineer & TKJ Teacher</span></div>
+      <div><span class="k">Location</span><span class="v">Indonesia</span></div>
+      <div><span class="k">Terminal</span><span class="v">PowerShell / Bash</span></div>
+      <div><span class="k">Editor</span><span class="v">VS Code</span></div>
+      <div><span class="k">Kernel</span><span class="v">Linux • Windows</span></div>
+      <div><span class="k">Learning</span><span class="v">DevOps • AI • Cloud</span></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="section alt" id="stack">
+  <div class="sec-head reveal">
+    <div class="sec-prompt"><b>$</b> ls -la ./stack</div>
+    <div class="sec-title">Current Stack</div>
+  </div>
+  <div class="stack-grid reveal">
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=linux" alt="">Linux</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=docker" alt="">Docker</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=ubuntu" alt="">Ubuntu</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=debian" alt="">Debian</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=git" alt="">Git</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=github" alt="">GitHub</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=vscode" alt="">VS Code</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=python" alt="">Python</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=php" alt="">PHP</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=html" alt="">HTML</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=css" alt="">CSS</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=js" alt="">JavaScript</div>
+    <div class="stack-chip"><img src="https://skillicons.dev/icons?i=bash" alt="">Bash</div>
+  </div>
+</section>
+ 
+<section class="section" id="network">
+  <div class="sec-head reveal">
+    <div class="sec-prompt"><b>$</b> show interfaces status</div>
+    <div class="sec-title">Networking</div>
+  </div>
+  <div class="topo reveal">
+    <div class="topo-row">
+      <div class="topo-node"><div class="box">🌐</div>Internet</div>
+      <div class="topo-line"></div>
+      <div class="topo-node"><div class="box">📡</div>Router<br>(MikroTik)</div>
+      <div class="topo-line"></div>
+      <div class="topo-node"><div class="box">🔀</div>Switch<br>(VLAN)</div>
+      <div class="topo-line"></div>
+      <div class="topo-node"><div class="box">🛡️</div>Firewall<br>/ VPN</div>
+      <div class="topo-line"></div>
+      <div class="topo-node"><div class="box">💻</div>Client</div>
+    </div>
+  </div>
+  <div class="badges reveal">
+    <span class="badge">MikroTik</span>
+    <span class="badge">Cisco</span>
+    <span class="badge">Fiber Optic (FTTH/FTTB)</span>
+    <span class="badge">Routing</span>
+    <span class="badge">Switching</span>
+    <span class="badge">VLAN</span>
+    <span class="badge">VPN</span>
+    <span class="badge">Firewall</span>
+  </div>
+</section>
+ 
+<section class="section alt" id="projects">
+  <div class="sec-head reveal">
+    <div class="sec-prompt"><b>$</b> ls ./projects</div>
+    <div class="sec-title">Proyek Saat Ini</div>
+  </div>
+  <div class="proj-grid reveal">
+    <div class="proj-card">
+      <div class="proj-icon">🤖</div>
+      <div class="proj-title">AI Server</div>
+      <div class="proj-desc">Self-hosted LLM stack pakai Ollama + Open WebUI, dijalankan di server Linux pribadi.</div>
+      <div class="proj-tags"><span class="proj-tag">Ollama</span><span class="proj-tag">Docker</span><span class="proj-tag">Linux</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-icon">🖥️</div>
+      <div class="proj-title">Linux Server</div>
+      <div class="proj-desc">Administrasi dan hardening server Linux — user management, service, dan monitoring.</div>
+      <div class="proj-tags"><span class="proj-tag">Ubuntu</span><span class="proj-tag">Debian</span><span class="proj-tag">Bash</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-icon">🐳</div>
+      <div class="proj-title">Docker Deployment</div>
+      <div class="proj-desc">Containerisasi dan deployment berbagai service dengan Docker & Docker Compose.</div>
+      <div class="proj-tags"><span class="proj-tag">Docker</span><span class="proj-tag">Compose</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-icon">🏫</div>
+      <div class="proj-title">Teaching Factory</div>
+      <div class="proj-desc">Program praktik industri untuk siswa TKJ — jaringan, server, dan perangkat keras.</div>
+      <div class="proj-tags"><span class="proj-tag">Vokasi</span><span class="proj-tag">Mentoring</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-icon">🔌</div>
+      <div class="proj-title">Fiber Optic Lab</div>
+      <div class="proj-desc">Instalasi & pelatihan fiber optic FTTH/FTTB, splicing, dan pengukuran redaman.</div>
+      <div class="proj-tags"><span class="proj-tag">FTTH</span><span class="proj-tag">FTTB</span><span class="proj-tag">Splicing</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-icon">⚙️</div>
+      <div class="proj-title">MikroTik Automation</div>
+      <div class="proj-desc">Script otomasi konfigurasi router MikroTik untuk efisiensi setup jaringan berulang.</div>
+      <div class="proj-tags"><span class="proj-tag">RouterOS</span><span class="proj-tag">Scripting</span></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="section" id="stats">
+  <div class="sec-head reveal">
+    <div class="sec-prompt"><b>$</b> ./github-stats.sh --live</div>
+    <div class="sec-title">GitHub Analytics</div>
+  </div>
+  <div class="stats-wrap reveal">
+    <div class="stats-pair">
+      <div class="stat-card"><img loading="lazy" src="https://github-readme-stats.vercel.app/api?username=rynnn27&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats Riyan Syahrul"></div>
+      <div class="stat-card"><img loading="lazy" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rynnn27&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages"></div>
+    </div>
+    <div class="stat-card"><img loading="lazy" src="https://github-readme-activity-graph.vercel.app/graph?username=rynnn27&theme=tokyo-night&hide_border=true" alt="Contribution activity graph"></div>
+    <div class="stat-card"><img loading="lazy" src="https://streak-stats.demolab.com?user=rynnn27&theme=tokyonight&hide_border=true" alt="GitHub streak"></div>
+    <div class="stat-card"><img loading="lazy" src="https://github-profile-trophy.vercel.app/?username=rynnn27&theme=tokyonight&no-frame=true&row=2&column=4" alt="GitHub trophies"></div>
+    <div class="stat-card"><img loading="lazy" src="https://raw.githubusercontent.com/rynnn27/rynnn27/output/github-contribution-grid-snake.svg" alt="Contribution snake"></div>
+  </div>
+</section>
+ 
+<section class="section alt" id="contact">
+  <div class="sec-head reveal" style="text-align:center;max-width:700px;margin:0 auto 30px;">
+    <div class="sec-prompt" style="justify-content:center;"><b>$</b> ./contact.sh --connect</div>
+    <div class="sec-title">Hubungi Saya</div>
+  </div>
+  <div class="contact-box reveal">
+    <blockquote>"Keep Learning, Keep Building, Keep Sharing."</blockquote>
+    <div class="contact-links">
+      <a href="https://github.com/rynnn27" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+      <!-- TODO: ganti dengan email asli -->
+      <a href="mailto:riyan@example.com" class="btn btn-ghost">Email</a>
+      <!-- TODO: tambah link LinkedIn / WhatsApp jika ada -->
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  <div class="uptime" id="uptime">system uptime: 0s</div>
+  <div>© <span id="year"></span> Riyan Syahrul — dibangun dengan HTML, CSS &amp; JS murni.</div>
+  <img loading="lazy" src="https://komarev.com/ghpvc/?username=rynnn27&style=for-the-badge&color=00c2ff" alt="profile views">
+</footer>
+ 
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+ 
+  // Typing effect for hero role
+  const roles = ["Network Engineer","Linux Administrator","Fiber Optic Specialist","Docker & MikroTik Enthusiast","TKJ Teacher","AI Server Developer"];
+  const typedEl = document.getElementById('typedRole');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) {
+    typedEl.textContent = roles[0];
+  } else {
+    let ri = 0, ci = 0, deleting = false;
+    function typeLoop(){
+      const word = roles[ri];
+      if (!deleting) {
+        ci++;
+        typedEl.innerHTML = word.slice(0, ci) + '<span class="cursor"></span>';
+        if (ci === word.length) { deleting = true; setTimeout(typeLoop, 1300); return; }
+      } else {
+        ci--;
+        typedEl.innerHTML = word.slice(0, ci) + '<span class="cursor"></span>';
+        if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+      }
+      setTimeout(typeLoop, deleting ? 35 : 65);
+    }
+    typeLoop();
+  }
+ 
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+ 
+  // Fake uptime counter
+  const start = Date.now();
+  const uptimeEl = document.getElementById('uptime');
+  setInterval(() => {
+    const s = Math.floor((Date.now() - start) / 1000);
+    const h = String(Math.floor(s/3600)).padStart(2,'0');
+    const m = String(Math.floor((s%3600)/60)).padStart(2,'0');
+    const sec = String(s%60).padStart(2,'0');
+    uptimeEl.textContent = `system uptime: ${h}:${m}:${sec}`;
+  }, 1000);
+ 
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+ 
