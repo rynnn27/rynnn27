@@ -1,9 +1,6 @@
 # rynnn27
 
 > Memorable developer positioning.
-
-**Theme:** GitHub · **Style:** Creative · **Agent:** Full-Stack Engineer
-
 ## About Me
 <p align="center">
   <picture>
