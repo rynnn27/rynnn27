@@ -5,7 +5,6 @@
 **Theme:** GitHub · **Style:** Creative · **Agent:** Full-Stack Engineer
 
 ## About Me
-Shapes the short profile story and positioning.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/about?username=rynnn27&theme=github-dark&mode=light" />
