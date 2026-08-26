@@ -1,6 +1,3 @@
-# rynnn27
-
-> Memorable developer positioning.
 ## About Me
 <p align="center">
   <picture>
